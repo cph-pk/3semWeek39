@@ -30,12 +30,25 @@ public class PersonDTO {
         this.lastName = p.getLastName();
         this.phone = p.getPhone();
         this.id = p.getId();
+        this.street = p.getAddress().getStreet();
+        this.zip = p.getAddress().getZip();
+        this.city = p.getAddress().getCity();
     }
 
     public PersonDTO(String fName, String lName, String phone) {
         this.firstName = fName;
         this.lastName = lName;
         this.phone = phone;
+    }
+
+    public PersonDTO(long id, String firstName, String lastName, String phone, String street, int zip, String city) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.street = street;
+        this.zip = zip;
+        this.city = city;
     }
 
     public long getId() {

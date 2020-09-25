@@ -55,6 +55,9 @@ public class Person implements Serializable {
 
     public void setAddress(Address address) {
         this.address = address;
+         if (address != null) {
+            address.setPerson(this);
+        }
     }
 
     public long getId() {
