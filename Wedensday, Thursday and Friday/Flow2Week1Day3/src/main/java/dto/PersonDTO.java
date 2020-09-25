@@ -18,6 +18,9 @@ public class PersonDTO {
     private String firstName;
     private String lastName;
     private String phone;
+    private String street;
+    private int zip;
+    private String city;
 
     public PersonDTO() {
     }
@@ -67,6 +70,31 @@ public class PersonDTO {
         return phone;
     }
 
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public int getZip() {
+        return zip;
+    }
+
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    
     @Override
     public int hashCode() {
         int hash = 5;
