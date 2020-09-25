@@ -137,14 +137,15 @@ public class PersonResourceTest {
                 .body("id", notNullValue());
     }
     
-//    @Test
-//    public void testGetPerson() throws Exception {
-//        given()
-//                .contentType("application/json")
-//                .when()
-//                .get("/person/" + p2.getId())
-//                .then()
-//                .assertThat()
-//                .body("id", equalTo(p2.getId()));
-//    }
+    @Test
+    public void testGetPerson() throws Exception {
+        int expected = Math.toIntExact(p2.getId());
+        given()
+                .contentType("application/json")
+                .when()
+                .get("/person/" + p2.getId())
+                .then()
+                .assertThat()
+                .body("id", equalTo(expected));
+    }
 }

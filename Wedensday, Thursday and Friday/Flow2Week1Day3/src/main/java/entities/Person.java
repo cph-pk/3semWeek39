@@ -91,6 +91,11 @@ public class Person implements Serializable {
     public void setLastEdited(Date lastEdited) {
         this.lastEdited = lastEdited;
     }
+
+    @Override
+    public String toString() {
+        return "firstName=" + firstName + ", lastName=" + lastName + ", phone=" + phone;
+    }
     
     
 }

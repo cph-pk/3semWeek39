@@ -69,11 +69,11 @@ public class PersonDTO {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 37 * hash + Objects.hashCode(this.id);
-        hash = 37 * hash + Objects.hashCode(this.firstName);
-        hash = 37 * hash + Objects.hashCode(this.lastName);
-        hash = 37 * hash + Objects.hashCode(this.phone);
+        int hash = 3;
+        hash = 41 * hash + (int) (this.id ^ (this.id >>> 32));
+        hash = 41 * hash + Objects.hashCode(this.firstName);
+        hash = 41 * hash + Objects.hashCode(this.lastName);
+        hash = 41 * hash + Objects.hashCode(this.phone);
         return hash;
     }
 
@@ -89,6 +89,9 @@ public class PersonDTO {
             return false;
         }
         final PersonDTO other = (PersonDTO) obj;
+        if (this.id != other.id) {
+            return false;
+        }
         if (!Objects.equals(this.firstName, other.firstName)) {
             return false;
         }
@@ -98,10 +101,9 @@ public class PersonDTO {
         if (!Objects.equals(this.phone, other.phone)) {
             return false;
         }
-        if (!Objects.equals(this.id, other.id)) {
-            return false;
-        }
         return true;
     }
+
+    
 
 }
