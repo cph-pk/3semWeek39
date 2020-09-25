@@ -6,7 +6,9 @@
 package entities;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,12 +24,13 @@ public class Address implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "A_ID")
     private Long id;
     private String street;
     private int zip;
     private String city;
 
-    @OneToOne(mappedBy = "address")
+    @OneToOne(fetch=FetchType.LAZY, mappedBy = "address")
     private Person person;
     
     public Address() {

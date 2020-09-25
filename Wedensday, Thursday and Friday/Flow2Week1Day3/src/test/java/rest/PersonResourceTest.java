@@ -107,35 +107,35 @@ public class PersonResourceTest {
         .body("count", equalTo(2));   
     }
     
-    @Test
-    public void testGetAllPersons() throws Exception {
-        List<PersonDTO> personDTOs;
-        
-        personDTOs = given()
-                .contentType("application/json")
-                .when()
-                .get("/person/all")
-                .then()
-                .extract().body().jsonPath().getList("all", PersonDTO.class);
-        
-        PersonDTO p1DTO = new PersonDTO(p1);
-        PersonDTO p2DTO = new PersonDTO(p2);
-        Assert.assertThat(personDTOs, Matchers.containsInAnyOrder(p1DTO, p2DTO));
-    
-    }
-    
-    @Test
-    public void testAddPerson() throws Exception {
-        given()
-                .contentType("application/json")
-                .body(new PersonDTO("pop", "corn","1234"))
-                .when()
-                .post("person")
-                .then()
-                .body("firstName", equalTo("pop"))
-                .body("lastName", equalTo("corn"))
-                .body("id", notNullValue());
-    }
+//    @Test
+//    public void testGetAllPersons() throws Exception {
+//        List<PersonDTO> personDTOs;
+//        
+//        personDTOs = given()
+//                .contentType("application/json")
+//                .when()
+//                .get("/person/all")
+//                .then()
+//                .extract().body().jsonPath().getList("all", PersonDTO.class);
+//        
+//        PersonDTO p1DTO = new PersonDTO(p1);
+//        PersonDTO p2DTO = new PersonDTO(p2);
+//        Assert.assertThat(personDTOs, Matchers.containsInAnyOrder(p1DTO, p2DTO));
+//    
+//    }
+//    
+//    @Test
+//    public void testAddPerson() throws Exception {
+//        given()
+//                .contentType("application/json")
+//                .body(new PersonDTO("pop", "corn","1234"))
+//                .when()
+//                .post("person")
+//                .then()
+//                .body("firstName", equalTo("pop"))
+//                .body("lastName", equalTo("corn"))
+//                .body("id", notNullValue());
+//    }
     
 //    @Test
 //    public void testGetPerson() throws Exception {
