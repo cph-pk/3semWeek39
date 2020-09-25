@@ -30,8 +30,9 @@ public class Tester {
         Address a3 = new Address("Brandgade 6",666,"Helvede");
 
         p1.setAddress(a1);
-        p2.setAddress(a2);
+        p2.setAddress(a1);
         p3.setAddress(a3);
+        
         
         em.getTransaction().begin();
         em.persist(p1);
