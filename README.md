@@ -17,10 +17,10 @@
         * `part3opg5` Part3, task 5
 * Flow2Week1.postman_collectio.json
 
-Flow2Week1Day3 are in tree different branches.
-[Link to `master` branch](https://github.com/cph-pk/3semWeek39)
-[Link to `part3` branch](https://github.com/cph-pk/3semWeek39/tree/part3)
-[Link to `part3opg5` branch](https://github.com/cph-pk/3semWeek39/tree/part3opg5)
+Flow2Week1Day3 are in tree different branches.\
+[Link to `master` branch](https://github.com/cph-pk/3semWeek39)\
+[Link to `part3` branch](https://github.com/cph-pk/3semWeek39/tree/part3)\
+[Link to `part3opg5` branch](https://github.com/cph-pk/3semWeek39/tree/part3opg5)\
 
 
 
