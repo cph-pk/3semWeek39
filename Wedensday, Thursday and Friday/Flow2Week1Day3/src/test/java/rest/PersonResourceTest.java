@@ -148,4 +148,16 @@ public class PersonResourceTest {
                 .assertThat()
                 .body("id", equalTo(expected));
     }
+    
+//    @Test
+//    public void testDeletePerson() throws Exception {
+//        int expected = Math.toIntExact(p2.getId());
+//        given()
+//                .contentType("application/json")
+//                .when()
+//                .delete("/person/" + p2.getId())
+//                .then()
+//                .assertThat()
+//                .body("id", equalTo(expected));
+//    }
 }
